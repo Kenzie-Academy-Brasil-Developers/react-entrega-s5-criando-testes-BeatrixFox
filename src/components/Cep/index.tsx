@@ -7,8 +7,9 @@ const Address = () => {
   return (
     <>
       <Divider horizontal>Endereço buscado</Divider>
-
-      {ceps.cep && (
+      {!ceps.cep ? (
+        <p>Endereço não encontrado</p>
+      ) : (
         <div className="Address">
           <Form>
             <Form.Field inline>
